@@ -1,6 +1,7 @@
+import { ReactComponent as MenuIcon } from 'assets/icons/menu.svg';
+import { ReactComponent as XIcon } from 'assets/icons/x.svg';
 import React, { FunctionComponent, useState } from 'react';
 
-import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
 import { MobileMenuComponent } from './MobileMenu';
 
 export const HeaderComponent: FunctionComponent = () => {
@@ -17,7 +18,7 @@ export const HeaderComponent: FunctionComponent = () => {
               setMenuOpen(!menuOpen);
             }}
           >
-            <MenuIcon />
+            {menuOpen ? <XIcon /> : <MenuIcon />}
           </div>
         </div>
       </div>
