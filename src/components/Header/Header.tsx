@@ -2,6 +2,7 @@ import { ReactComponent as MenuIcon } from 'assets/icons/menu.svg';
 import { ReactComponent as XIcon } from 'assets/icons/x.svg';
 import React, { FunctionComponent, useState } from 'react';
 
+import { MenuComponent } from './Menu';
 import { MobileMenuComponent } from './MobileMenu';
 
 export const HeaderComponent: FunctionComponent = () => {
@@ -17,12 +18,13 @@ export const HeaderComponent: FunctionComponent = () => {
         >
           SATVIK DAGA
         </div>
-        <div>
+        <div className="w-1/3">
+          <MenuComponent />
           <div
             role="button"
             aria-pressed="false"
             aria-label="menu"
-            className="md:hidden cursor-pointer"
+            className="md:hidden cursor-pointer float-right"
             onClick={() => {
               setMenuOpen(!menuOpen);
             }}
