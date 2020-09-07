@@ -131,6 +131,11 @@ module.exports = {
         800: '#97266d',
         900: '#702459',
       },
+      primary1: '#1b4079ff',
+      primary2: '#cbdf90',
+      secondary1: '#4d7c8a',
+      secondary2: '#8fad88',
+      tertiary: '#7f9c96',
     },
     spacing: {
       px: '1px',
