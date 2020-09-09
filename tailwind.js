@@ -653,6 +653,7 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      slideInY: 'slideInY 1s',
     },
     keyframes: {
       spin: {
@@ -672,6 +673,16 @@ module.exports = {
         '50%': {
           transform: 'none',
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+        },
+      },
+      slideInY: {
+        from: {
+          opacity: 0,
+          transform: 'translateY(-100%)',
+        },
+        to: {
+          opacity: 1,
+          transform: 'translateY(0)',
         },
       },
     },
