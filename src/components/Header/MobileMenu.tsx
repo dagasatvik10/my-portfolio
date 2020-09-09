@@ -8,14 +8,14 @@ export const MobileMenuComponent: FunctionComponent<Props> = ({ isOpen }) => {
   return (
     <div className="overflow-hidden">
       <div
-        className={`flex-col w-full bg-black text-white justify-around items-center animate-slideInY ${
+        className={`flex-col w-full bg-primary2 font-semibold justify-around items-center animate-slideInY ${
           isOpen ? 'flex' : 'hidden'
         }`}
       >
-        <div className="py-1 hover:text-green-600 inline-block w-auto">Home</div>
-        <div className="py-1 hover:text-green-600 inline-block w-auto">Portfolio</div>
-        <div className="py-1 hover:text-green-600 inline-block w-auto">Blog</div>
-        <div className="py-1 hover:text-green-600 inline-block w-auto">Contact Me</div>
+        <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Home</div>
+        <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Portfolio</div>
+        <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Blog</div>
+        <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Contact Me</div>
       </div>
     </div>
   );
