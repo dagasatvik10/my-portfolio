@@ -10,20 +10,22 @@
     "@types/node": "^12.12.54",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
+    "chokidar-cli": "^2.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "typescript": "^3.8.0"
   },
   "scripts": {
-    "start": "npm-run-all --sequential watch:css start:react",
-    "build": "npm-run-all --sequential build:css build:react",
+    "prestart": "run-s build:css",
+    "start": "run-p watch:css start:react",
     "start:react": "react-scripts start",
-    "build:react": "react-scripts build",
+    "prebuild": "run-s build:css",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
     "eject": "react-scripts eject",
     "build:css": "postcss src/assets/tailwind.css -o src/assets/tailwind.output.css",
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/tailwind.output.css"
+    "watch:css": "chokidar 'src/**/*.css' 'src/**/*.scss' 'tailwind.js' --ignore src/assets/tailwind.output.css -c 'npm run build:css'"
   },
   "eslintConfig": {
     "extends": "react-app"
