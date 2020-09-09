@@ -6,15 +6,17 @@ type Props = {
 
 export const MobileMenuComponent: FunctionComponent<Props> = ({ isOpen }) => {
   return (
-    <div
-      className={`flex flex-col w-full bg-black text-white justify-around items-center transition-all duration-1000 ease-in-out ${
-        isOpen ? 'h-40 text-opacity-100' : 'h-0 text-opacity-0'
-      }`}
-    >
-      <div className="py-1 hover:text-green-600 inline-block w-auto">Home</div>
-      <div className="py-1 hover:text-green-600 inline-block w-auto">Portfolio</div>
-      <div className="py-1 hover:text-green-600 inline-block w-auto">Blog</div>
-      <div className="py-1 hover:text-green-600 inline-block w-auto">Contact Me</div>
+    <div className="overflow-hidden">
+      <div
+        className={`flex-col w-full bg-primary2 font-semibold justify-around items-center animate-slideInY ${
+          isOpen ? 'flex' : 'hidden'
+        }`}
+      >
+        <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Home</div>
+        <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Portfolio</div>
+        <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Blog</div>
+        <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Contact Me</div>
+      </div>
     </div>
   );
 };

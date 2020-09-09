@@ -10,12 +10,8 @@ export const HeaderComponent: FunctionComponent = () => {
 
   return (
     <>
-      <div className="flex flex-row justify-between p-5 h-auto items-center border-b-2 border-solid border-gray-200">
-        <div
-          role="heading"
-          aria-level={1}
-          className="font-black text-black text-xl md:text-3xl font-title cursor-pointer"
-        >
+      <div className="flex flex-row justify-between p-5 h-auto items-center border-b-2 border-solid border-white bg-primary2">
+        <div role="heading" aria-level={1} className="font-black text-xl md:text-3xl font-title cursor-pointer">
           SATVIK DAGA
         </div>
         <div className="w-1/3">
