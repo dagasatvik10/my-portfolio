@@ -6,7 +6,7 @@ type Props = {
 
 export const MobileMenuComponent: FunctionComponent<Props> = ({ isOpen }) => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden lg:hidden">
       <div
         className={`flex-col w-full bg-primary2 font-semibold justify-around items-center animate-slideInY ${
           isOpen ? 'flex' : 'hidden'
