@@ -11,7 +11,7 @@ export const HeaderComponent: FunctionComponent = () => {
   return (
     <>
       <div className="flex flex-row justify-between p-5 h-auto items-center border-b-2 border-solid border-white bg-primary2">
-        <div role="heading" aria-level={1} className="font-black text-xl md:text-3xl font-title cursor-pointer">
+        <div role="heading" aria-level={1} className="font-black text-xl lg:text-3xl font-title cursor-pointer">
           SATVIK DAGA
         </div>
         <div className="w-1/3">
@@ -20,7 +20,7 @@ export const HeaderComponent: FunctionComponent = () => {
             role="button"
             aria-pressed="false"
             aria-label="menu"
-            className="md:hidden cursor-pointer float-right"
+            className="lg:hidden cursor-pointer float-right"
             onClick={() => {
               setMenuOpen(!menuOpen);
             }}
