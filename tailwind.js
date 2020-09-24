@@ -654,6 +654,7 @@ module.exports = {
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
       slideInY: 'slideInY 1s',
+      buzzOut: 'buzzOut 1s linear infinite',
     },
     keyframes: {
       spin: {
@@ -683,6 +684,38 @@ module.exports = {
         to: {
           opacity: 1,
           transform: 'translateY(0)',
+        },
+      },
+      buzzOut: {
+        '10%': {
+          transform: 'translateX(3px) rotate(2deg)',
+        },
+        '20%': {
+          transform: 'translateX(-3px) rotate(-2deg)',
+        },
+        '30%': {
+          transform: 'translateX(3px) rotate(2deg)',
+        },
+        '40%': {
+          transform: 'translateX(-3px) rotate(-2deg)',
+        },
+        '50%': {
+          transform: 'translateX(2px) rotate(1deg)',
+        },
+        '60%': {
+          transform: 'translateX(-2px) rotate(-1deg)',
+        },
+        '70%': {
+          transform: 'translateX(2px) rotate(1deg)',
+        },
+        '80%': {
+          transform: 'translateX(-2px) rotate(-1deg)',
+        },
+        '90%': {
+          transform: 'translateX(1px) rotate(0deg)',
+        },
+        '100%': {
+          transform: 'translateX(-1px) rotate(0deg)',
         },
       },
     },
@@ -791,7 +824,7 @@ module.exports = {
     transitionTimingFunction: ['responsive'],
     transitionDuration: ['responsive'],
     transitionDelay: ['responsive'],
-    animation: ['responsive'],
+    animation: ['responsive', 'hover'],
   },
   corePlugins: {},
   plugins: [],
