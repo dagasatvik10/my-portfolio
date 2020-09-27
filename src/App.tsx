@@ -10,7 +10,7 @@ const App: FunctionComponent = () => {
   return (
     <Router>
       <div className="container mx-auto bg-white flex flex-col justify-between font-body h-screen overflow-scroll text-primary1">
-        <div>
+        <div className="flex flex-col justify-start">
           <HeaderComponent />
           <Suspense fallback={<LoaderComponent />}>
             <Switch>
