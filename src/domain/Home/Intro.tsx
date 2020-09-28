@@ -1,3 +1,4 @@
+import { PillButton } from 'components/Buttons';
 import React, { FunctionComponent } from 'react';
 import { JOB_START_DATE } from './constants';
 import { SquareBoxesComponent } from './SquareBoxes';
@@ -30,7 +31,7 @@ export const IntroComponent: FunctionComponent = () => {
           </div>
         </div>
         <div className="pt-5">
-          <button className="bg-secondary1 text-white font-bold rounded-full py-2 px-4 sm:text-xl">Contact Me</button>
+          <PillButton>Contact Me</PillButton>
         </div>
       </div>
       <SquareBoxesComponent />
