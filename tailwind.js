@@ -678,12 +678,14 @@ module.exports = {
       },
       slideInY: {
         from: {
-          opacity: 0,
-          transform: 'translateY(-100%)',
+          height: 0,
+          // opacity: 0,
+          // transform: 'translateY(-100%)',
         },
         to: {
-          opacity: 1,
-          transform: 'translateY(0)',
+          height: '128px',
+          // opacity: 1,
+          // transform: 'translateY(0)',
         },
       },
       buzzOut: {
