@@ -286,6 +286,8 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      '7xl': '5rem',
+      '8xl': '6rem',
     },
     fontWeight: {
       hairline: '100',
@@ -303,6 +305,7 @@ module.exports = {
       ...theme('spacing'),
       full: '100%',
       screen: '100vh',
+      600: '600px',
       500: '500px',
       450: '450px',
       400: '400px',
