@@ -201,6 +201,7 @@ module.exports = {
       lg: '0.5rem',
       full: '9999px',
       'bottom-right': '0% 100% 60% 40% / 100% 0% 100% 0%',
+      skills: '0% 100% 85% 15% / 30% 0% 100% 70%',
     },
     borderWidth: {
       default: '1px',
