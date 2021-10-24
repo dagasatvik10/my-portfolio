@@ -1,5 +1,5 @@
 import PillButton from 'components/Buttons';
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 
 import { JOB_START_DATE } from './constants';
 import { SquareBoxesComponent } from './SquareBoxes';

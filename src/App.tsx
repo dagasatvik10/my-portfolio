@@ -1,7 +1,7 @@
 import FooterComponent from 'components/Footer';
 import HeaderComponent from 'components/Header';
 import LoaderComponent from 'components/Loader';
-import React, { FunctionComponent, lazy, Suspense } from 'react';
+import { FunctionComponent, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const HomeComponent = lazy(() => import('./domain/Home'));

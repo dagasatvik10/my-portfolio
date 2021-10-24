@@ -2,7 +2,7 @@ import { ReactComponent as FbIcon } from 'assets/icons/facebook.svg';
 import { ReactComponent as GithubIcon } from 'assets/icons/github.svg';
 import { ReactComponent as LinkedinIcon } from 'assets/icons/linkedin.svg';
 import { ReactComponent as TwitterIcon } from 'assets/icons/twitter.svg';
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 
 export const BodyComponent: FunctionComponent = () => {
   return (

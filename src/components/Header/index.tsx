@@ -1,6 +1,6 @@
 import { ReactComponent as MenuIcon } from 'assets/icons/menu.svg';
 import { ReactComponent as XIcon } from 'assets/icons/x.svg';
-import React, { FunctionComponent, useState } from 'react';
+import { FunctionComponent, useState } from 'react';
 
 import { MenuComponent } from './Menu';
 import { MobileMenuComponent } from './MobileMenu';
