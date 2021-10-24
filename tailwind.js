@@ -131,6 +131,11 @@ module.exports = {
         800: '#97266d',
         900: '#702459',
       },
+      primary1: '#1b4079ff',
+      primary2: '#cbdf90',
+      secondary1: '#4d7c8a',
+      secondary2: '#8fad88',
+      tertiary: '#7f9c96',
     },
     spacing: {
       px: '1px',
@@ -195,6 +200,8 @@ module.exports = {
       md: '0.375rem',
       lg: '0.5rem',
       full: '9999px',
+      'bottom-right': '0% 100% 60% 40% / 100% 0% 100% 0%',
+      skills: '0% 100% 85% 15% / 30% 0% 100% 70%',
     },
     borderWidth: {
       default: '1px',
@@ -202,6 +209,7 @@ module.exports = {
       2: '2px',
       4: '4px',
       8: '8px',
+      60: '30px',
     },
     boxShadow: {
       xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
@@ -246,23 +254,28 @@ module.exports = {
       default: '1',
     },
     fontFamily: {
-      sans: [
-        'system-ui',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        '"Noto Sans"',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-      ],
-      serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-      mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+      // sans: [
+      //   '"Changa One"',
+      //   'system-ui',
+      //   '-apple-system',
+      //   'BlinkMacSystemFont',
+      //   '"Segoe UI"',
+      //   'Roboto',
+      //   '"Helvetica Neue"',
+      //   'Arial',
+      //   '"Noto Sans"',
+      //   'sans-serif',
+      //   '"Apple Color Emoji"',
+      //   '"Segoe UI Emoji"',
+      //   '"Segoe UI Symbol"',
+      //   '"Noto Color Emoji"',
+      // ],
+      // serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      // mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+      title: ['"Changa One"', 'Impact', 'sans-serif'],
+      heading: ['Impact', 'Haettenschweiler', '"Franklin Gothic Bold"', 'Charcoal', 'sans-serif'],
+      subheading: ['Inconsolata', 'monospace'],
+      body: ['Montserrat', 'sans-serif'],
     },
     fontSize: {
       xs: '0.75rem',
@@ -275,6 +288,8 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      '7xl': '5rem',
+      '8xl': '6rem',
     },
     fontWeight: {
       hairline: '100',
@@ -292,6 +307,16 @@ module.exports = {
       ...theme('spacing'),
       full: '100%',
       screen: '100vh',
+      600: '600px',
+      500: '500px',
+      450: '450px',
+      400: '400px',
+      350: '350px',
+      300: '300px',
+      250: '250px',
+      200: '200px',
+      150: '150px',
+      100: '100px',
     }),
     inset: {
       0: '0',
@@ -442,6 +467,15 @@ module.exports = {
       '11/12': '91.666667%',
       full: '100%',
       screen: '100vw',
+      500: '500px',
+      450: '450px',
+      400: '400px',
+      350: '350px',
+      300: '300px',
+      250: '250px',
+      200: '200px',
+      150: '150px',
+      100: '100px',
     }),
     zIndex: {
       auto: 'auto',
@@ -643,6 +677,8 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      slideInY: 'slideInY 1s',
+      buzzOut: 'buzzOut 1s linear infinite',
     },
     keyframes: {
       spin: {
@@ -662,6 +698,50 @@ module.exports = {
         '50%': {
           transform: 'none',
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+        },
+      },
+      slideInY: {
+        from: {
+          height: 0,
+          // opacity: 0,
+          // transform: 'translateY(-100%)',
+        },
+        to: {
+          height: '128px',
+          // opacity: 1,
+          // transform: 'translateY(0)',
+        },
+      },
+      buzzOut: {
+        '10%': {
+          transform: 'translateX(3px) rotate(2deg)',
+        },
+        '20%': {
+          transform: 'translateX(-3px) rotate(-2deg)',
+        },
+        '30%': {
+          transform: 'translateX(3px) rotate(2deg)',
+        },
+        '40%': {
+          transform: 'translateX(-3px) rotate(-2deg)',
+        },
+        '50%': {
+          transform: 'translateX(2px) rotate(1deg)',
+        },
+        '60%': {
+          transform: 'translateX(-2px) rotate(-1deg)',
+        },
+        '70%': {
+          transform: 'translateX(2px) rotate(1deg)',
+        },
+        '80%': {
+          transform: 'translateX(-2px) rotate(-1deg)',
+        },
+        '90%': {
+          transform: 'translateX(1px) rotate(0deg)',
+        },
+        '100%': {
+          transform: 'translateX(-1px) rotate(0deg)',
         },
       },
     },
@@ -770,7 +850,7 @@ module.exports = {
     transitionTimingFunction: ['responsive'],
     transitionDuration: ['responsive'],
     transitionDelay: ['responsive'],
-    animation: ['responsive'],
+    animation: ['responsive', 'hover'],
   },
   corePlugins: {},
   plugins: [],
