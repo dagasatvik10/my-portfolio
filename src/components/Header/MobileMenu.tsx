@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 
 type Props = {
   isOpen: boolean;
@@ -14,7 +14,14 @@ export const MobileMenuComponent: FunctionComponent<Props> = ({ isOpen }) => {
       >
         <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Home</div>
         <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Portfolio</div>
-        <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Blog</div>
+        <a
+          href="https://dev.to/dagasatvik10"
+          target="_blank"
+          className="py-1 hover:font-bold cursor-pointer inline-block w-auto"
+          rel="noreferrer"
+        >
+          Blog
+        </a>
         <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Contact Me</div>
       </div>
     </div>
