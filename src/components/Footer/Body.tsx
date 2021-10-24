@@ -45,7 +45,14 @@ export const BodyComponent: FunctionComponent = () => {
         <div className="flex flex-col items-center w-1/3 justify-evenly md:text-3xl">
           <div className="hover:font-bold cursor-pointer">Home</div>
           <div className="hover:font-bold cursor-pointer">Portfolio</div>
-          <div className="hover:font-bold cursor-pointer">Blog</div>
+          <a
+            href="https://dev.to/dagasatvik10"
+            target="_blank"
+            className="hover:font-bold cursor-pointer"
+            rel="noreferrer"
+          >
+            Blog
+          </a>
           <div className="hover:font-bold cursor-pointer">Contact Me</div>
         </div>
         <div className="w-1/3 flex flex-row justify-center items-center">
