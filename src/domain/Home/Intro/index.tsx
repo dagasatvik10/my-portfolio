@@ -1,10 +1,11 @@
-import { PillButton } from 'components/Buttons';
+import PillButton from 'components/Buttons';
 import React, { FunctionComponent } from 'react';
+
 import { JOB_START_DATE } from './constants';
 import { SquareBoxesComponent } from './SquareBoxes';
 import { differenceInYearsAndMonths } from './utilities';
 
-export const IntroComponent: FunctionComponent = () => {
+const Intro: FunctionComponent = () => {
   const { years: yearsOfExp, months: monthsOfExp } = differenceInYearsAndMonths(JOB_START_DATE, new Date());
   return (
     <div className="relative w-full h-400 sm:h-600 flex flex-col items-start justify-between px-2">
@@ -38,3 +39,5 @@ export const IntroComponent: FunctionComponent = () => {
     </div>
   );
 };
+
+export default Intro;

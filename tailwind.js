@@ -200,6 +200,7 @@ module.exports = {
       md: '0.375rem',
       lg: '0.5rem',
       full: '9999px',
+      'bottom-right': '0% 100% 60% 40% / 100% 0% 100% 0%',
     },
     borderWidth: {
       default: '1px',

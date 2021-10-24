@@ -1,7 +1,7 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import React from 'react';
 
-import { HeaderComponent } from './Header';
+import { HeaderComponent } from '.';
 
 const HEADING_ROLE = 'heading';
 const MAIN_HEADING = 'SATVIK DAGA';

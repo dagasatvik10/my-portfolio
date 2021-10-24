@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from 'react';
-import { AboutMeComponent } from './AboutMe';
 
-import { IntroComponent } from './Intro';
+import AboutMeComponent from './AboutMe';
+import IntroComponent from './Intro';
 
-export const HomeComponent: FunctionComponent = () => {
+const HomeComponent: FunctionComponent = () => {
   return (
     <div className="flex flex-col justify-around">
       <IntroComponent />
@@ -11,3 +11,5 @@ export const HomeComponent: FunctionComponent = () => {
     </div>
   );
 };
+
+export default HomeComponent;

@@ -1,8 +1,9 @@
-import { PillButton } from 'components/Buttons';
+import PillButton from 'components/Buttons';
 import React, { FunctionComponent } from 'react';
+
 import aboutMeBg from './about-bg.png';
 
-export const AboutMeComponent: FunctionComponent = () => {
+const AboutMe: FunctionComponent = () => {
   return (
     <div className="flex flex-row justify-around items-center py-5 px-2">
       <div className="flex flex-row items-center">
@@ -25,3 +26,5 @@ export const AboutMeComponent: FunctionComponent = () => {
     </div>
   );
 };
+
+export default AboutMe;

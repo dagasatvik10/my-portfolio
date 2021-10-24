@@ -4,7 +4,7 @@ import { BodyComponent } from './Body';
 import { CopyrightComponent } from './Copyright';
 import { TopNameComponent } from './TopName';
 
-export const FooterComponent: FunctionComponent = () => {
+const Footer: FunctionComponent = () => {
   return (
     <div className="flex flex-col justify-start">
       <TopNameComponent />
@@ -13,3 +13,5 @@ export const FooterComponent: FunctionComponent = () => {
     </div>
   );
 };
+
+export default Footer;
