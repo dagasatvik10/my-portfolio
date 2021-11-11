@@ -7,7 +7,7 @@ import { FunctionComponent } from 'react';
 export const BodyComponent: FunctionComponent = () => {
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row self-center justify-evenly text-primary2 mt-12 mb-6">
+      <div className="flex flex-row self-center justify-evenly text-primary2 my-6">
         <a
           className="outline-none px-2"
           href="https://www.facebook.com/satvik.daga"
@@ -63,7 +63,7 @@ export const BodyComponent: FunctionComponent = () => {
             Visit my blog
             <br /> at{' '}
             <a
-              className="bg-transparent text-primary2 outline-none"
+              className="bg-transparent font-bold outline-none"
               href="https://dev.to/dagasatvik10/"
               target="_blank"
               rel="noopener noreferrer"
