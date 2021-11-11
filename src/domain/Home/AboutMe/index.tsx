@@ -5,7 +5,7 @@ import aboutMeBg from './about-bg.png';
 
 const AboutMe: FunctionComponent = () => {
   return (
-    <div className="flex flex-row justify-around items-center py-5 px-2">
+    <div className="flex flex-row justify-around items-center py-3 px-2">
       <div className="flex flex-row items-center">
         <img src={aboutMeBg} alt="About Me" />
       </div>
