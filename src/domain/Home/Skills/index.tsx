@@ -10,9 +10,9 @@ import SkillWrapper from './SkillWrapper';
 
 const StrengthsComponent: FunctionComponent = () => {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full pt-3">
       <div className="flex flex-col items-center justify-between h-full w-full">
-        <div className="font-bold text-2xl sm:text-4xl lg:text-6xl z-10 flex-grow-0 py-2">SKILLS</div>
+        <div className="font-bold text-2xl sm:text-4xl lg:text-6xl z-10 flex-grow-0">SKILLS</div>
         <div className="flex flex-col flex-grow w-full z-10 py-5">
           <div className="flex flex-row w-full justify-evenly">
             <SkillWrapper icon={nodejsIcon} title="API's" />
