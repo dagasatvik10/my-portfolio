@@ -14,7 +14,7 @@ const Header: FunctionComponent = () => {
         <div role="heading" aria-level={1} className="font-black text-xl lg:text-3xl font-title cursor-pointer">
           SATVIK DAGA
         </div>
-        <div className="w-1/3">
+        <div className="xl:w-1/3 lg:w-2/5">
           <MenuComponent />
           <div
             role="button"
