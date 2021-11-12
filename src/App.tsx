@@ -5,6 +5,7 @@ import { FunctionComponent, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const HomeComponent = lazy(() => import('./domain/Home'));
+const ContactComponent = lazy(() => import('./domain/Contact'));
 
 const App: FunctionComponent = () => {
   return (
@@ -16,7 +17,7 @@ const App: FunctionComponent = () => {
             <Switch>
               <Route exact path="/" component={HomeComponent} />
               <Route path="/portfolio">Portfolio</Route>
-              <Route path="/contact">Contact Me</Route>
+              <Route path="/contact" component={ContactComponent} />
             </Switch>
           </Suspense>
         </div>
