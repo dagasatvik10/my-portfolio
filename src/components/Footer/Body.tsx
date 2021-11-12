@@ -3,6 +3,7 @@ import { ReactComponent as GithubIcon } from 'assets/icons/github.svg';
 import { ReactComponent as LinkedinIcon } from 'assets/icons/linkedin.svg';
 import { ReactComponent as TwitterIcon } from 'assets/icons/twitter.svg';
 import { FunctionComponent } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const BodyComponent: FunctionComponent = () => {
   return (
@@ -43,8 +44,12 @@ export const BodyComponent: FunctionComponent = () => {
       </div>
       <div className="flex flex-row justify-between">
         <div className="flex flex-col items-center w-1/3 justify-evenly md:text-3xl">
-          <div className="hover:font-bold cursor-pointer">Home</div>
-          <div className="hover:font-bold cursor-pointer">Portfolio</div>
+          <NavLink to="/" className="hover:font-bold cursor-pointer">
+            Home
+          </NavLink>
+          <NavLink to="/portfolio" className="hover:font-bold cursor-pointer">
+            Portfolio
+          </NavLink>
           <a
             href="https://dev.to/dagasatvik10"
             target="_blank"
@@ -53,7 +58,9 @@ export const BodyComponent: FunctionComponent = () => {
           >
             Blog
           </a>
-          <div className="hover:font-bold cursor-pointer">Contact Me</div>
+          <NavLink to="/contact" className="hover:font-bold cursor-pointer">
+            Contact Me
+          </NavLink>
         </div>
         <div className="w-1/3 flex flex-row justify-center items-center">
           <div className="w-1 h-20 md:h-32 bg-primary1"></div>

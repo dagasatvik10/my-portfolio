@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import { NavLink } from 'react-router-dom';
 
 type Props = {
   isOpen: boolean;
@@ -12,17 +13,36 @@ export const MobileMenuComponent: FunctionComponent<Props> = ({ isOpen }) => {
           isOpen ? 'flex' : 'hidden'
         }`}
       >
-        <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Home</div>
-        <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Portfolio</div>
+        <NavLink
+          className="py-1 hover:font-extrabold cursor-pointer inline-block w-auto"
+          to="/"
+          exact
+          activeClassName="font-extrabold"
+        >
+          Home
+        </NavLink>
+        <NavLink
+          className="py-1 hover:font-extrabold cursor-pointer inline-block w-auto"
+          to="/portfolio"
+          activeClassName="font-extrabold"
+        >
+          Portfolio
+        </NavLink>
         <a
           href="https://dev.to/dagasatvik10"
           target="_blank"
-          className="py-1 hover:font-bold cursor-pointer inline-block w-auto"
+          className="py-1 hover:font-extrabold cursor-pointer inline-block w-auto"
           rel="noreferrer"
         >
           Blog
         </a>
-        <div className="py-1 hover:font-bold cursor-pointer inline-block w-auto">Contact Me</div>
+        <NavLink
+          className="py-1 hover:font-extrabold cursor-pointer inline-block w-auto"
+          to="/contact"
+          activeClassName="font-extrabold"
+        >
+          Contact Me
+        </NavLink>
       </div>
     </div>
   );
