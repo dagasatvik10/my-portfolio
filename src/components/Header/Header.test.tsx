@@ -1,7 +1,8 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 
-import { HeaderComponent } from '.';
+import HeaderComponent from '.';
 
 const HEADING_ROLE = 'heading';
 const MAIN_HEADING = 'SATVIK DAGA';
@@ -11,13 +12,21 @@ const MENU_ICON_TITLE = 'menu';
 const X_ICON_TITLE = 'x';
 
 test(`renders ${MAIN_HEADING} in heading`, () => {
-  const { getByRole } = render(<HeaderComponent />);
+  const { getByRole } = render(
+    <MemoryRouter>
+      <HeaderComponent />
+    </MemoryRouter>
+  );
   const headingElement = getByRole(HEADING_ROLE);
   expect(headingElement).toHaveTextContent(MAIN_HEADING);
 });
 
 test('toggle MenuIcon & XIcon on clicking Menu Button', async () => {
-  render(<HeaderComponent />);
+  render(
+    <MemoryRouter>
+      <HeaderComponent />
+    </MemoryRouter>
+  );
 
   // replace MenuIcon with XIcon
   fireEvent.click(screen.getByLabelText(MENU_LABEL));
