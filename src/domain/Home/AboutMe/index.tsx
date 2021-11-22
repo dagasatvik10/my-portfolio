@@ -1,9 +1,11 @@
 import PillButton from 'components/Buttons';
 import { FunctionComponent } from 'react';
+import { useHistory } from 'react-router';
 
 import aboutMeBg from './about-bg.png';
 
 const AboutMe: FunctionComponent = () => {
+  const history = useHistory();
   return (
     <div className="flex flex-row justify-around items-center py-3 px-2">
       <div className="flex flex-row items-center">
@@ -20,7 +22,7 @@ const AboutMe: FunctionComponent = () => {
           available technologies. Please feel free to contact me to discuss any projects you may have in mind.
         </div>
         <div className="pt-5">
-          <PillButton>See Portfolio</PillButton>
+          <PillButton onClick={() => history.push('/portfolio')}>See Portfolio</PillButton>
         </div>
       </div>
     </div>

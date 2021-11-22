@@ -1,5 +1,6 @@
 import PillButton from 'components/Buttons';
 import { FunctionComponent } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { JOB_START_DATE } from './constants';
 import { SquareBoxesComponent } from './SquareBoxes';
@@ -7,6 +8,8 @@ import { differenceInYearsAndMonths } from './utilities';
 
 const Intro: FunctionComponent = () => {
   const { years: yearsOfExp, months: monthsOfExp } = differenceInYearsAndMonths(JOB_START_DATE, new Date());
+  const history = useHistory();
+
   return (
     // h-350 md:h-400 lg:h-550
     <div className="relative w-full flex flex-col items-start justify-between px-2 pb-3">
@@ -33,7 +36,7 @@ const Intro: FunctionComponent = () => {
           </div>
         </div>
         <div className="pt-5">
-          <PillButton>Contact Me</PillButton>
+          <PillButton onClick={() => history.push('/contact')}>Contact Me</PillButton>
         </div>
       </div>
       <SquareBoxesComponent />
